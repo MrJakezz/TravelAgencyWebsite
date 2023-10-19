@@ -1,0 +1,45 @@
+﻿@using EntityLayer.Concrete
+@model List<Guide>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    //
+    int timer = 0;
+}
+
+<h1>Rehberler</h1>
+<hr>
+<a href="/Admin/Guide/AddGuide/" class="btn btn-info" style="display: block; width: 100%; text-align: center;">Yeni Rehber Girişi</a>
+<hr>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Görsel</th>
+        <th>İsim - Soyisim</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+        <th>Düzenle</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            @{timer += 1;}
+            <td>@timer</td>
+            <td align="center"><img src="@item.GuideImage" class="rounded-circle" height="50" width="50"></td>
+            <td>@item.GuideName</td>
+            <td>@item.GuideDescription</td>
+
+            @if(item.GuideStatus == true)
+            {
+                <td><a href="/Admin/Guide/ChangeToPassive/" class="btn btn-outline-secondary" style="display: block; width: 100%; text-align: center">Pasif Yap</a></td>
+            }
+            else
+            {
+                <td><a href="/Admin/Guide/ChangeToActive/" class="btn btn-outline-success" style="display: block; width: 100%; text-align: center;">Aktif Yap</a></td>
+            }
+
+            <td><a href="/Admin/Guide/EditGuide/" class="btn btn-outline-info" style="display: block; width: 100%; text-align: center;">Düzenle</a></td>
+        </tr>
+    }
+</table>

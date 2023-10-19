@@ -1,0 +1,21 @@
+﻿@model List<EntityLayer.Concrete.Feature1>
+
+@{
+    var reversedModel = Model.OrderByDescending(x => x.Feature1ID).ToList();
+}
+
+@foreach(var item in reversedModel.Take(1)) {
+<div class="maghny-gd-1 col-lg-6">
+    <div class="maghny-grid">
+        <figure class="effect-lily border-radius  m-0">
+            <img class="img-fluid" src="@item.Feature1Image" alt="" />
+            <figcaption>
+                <div>
+                    <h4>@item.Feature1Title</h4>
+                    <p>@item.Feature1Description</p>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+}

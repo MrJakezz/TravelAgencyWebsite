@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Guide
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Rehber Ekle</h1>
+
+<form method="post">
+    <div class="form-group">
+        @Html.Label("İsim - Soyisim *")
+        <input type="text" asp-for="GuideName" class="form-control">
+        <span asp-validation-for="GuideName" class="text-danger"></span>
+    </div><br>
+    <div class="form-group">
+        @Html.Label("Görsel *")
+        <input type="text" asp-for="GuideImage" class="form-control" placeholder="URL">
+        <span asp-validation-for="GuideImage" class="text-danger"></span>
+    </div><br>
+    <div class="form-group">
+        @Html.Label("Instagram URL")
+        <input type="text" asp-for="GuideInstagramURL" class="form-control">
+    </div><br>
+    <div class="form-group">
+        @Html.Label("Twitter URL")
+        <input type="text" asp-for="GuideTwitterURL" class="form-control">
+    </div><br>
+    <div class="form-group">
+        @Html.Label("Açıklama *")
+        <textarea cols="30" rows="5" class="form-control" asp-for="GuideDescription" style="resize: none;"></textarea>
+        <span asp-validation-for="GuideDescription" class="text-danger"></span>
+    </div><br>
+    <br>
+    <br>
+    <button class="btn btn-success" style="display: block; width: 100%; text-align: center;">Kaydet</button>
+</form>

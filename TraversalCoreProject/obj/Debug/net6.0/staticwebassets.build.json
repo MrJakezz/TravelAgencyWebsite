@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/swa4YH8eVxf60DQ66b5RpzyU5cyT/cS97SyBY7B3vM=",
+  "Hash": "QeNlTJXstl/b4xuzmhf7BicuBpwJFXY4MB3kP4KfEk8=",
   "Source": "TraversalCoreProject",
   "BasePath": "_content/TraversalCoreProject",
   "Mode": "Default",
@@ -3228,6 +3228,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PDFReports\\pdf1.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\wwwroot\\PDFReports\\PdfTable.pdf",
+      "SourceId": "TraversalCoreProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\wwwroot\\",
+      "BasePath": "_content/TraversalCoreProject",
+      "RelativePath": "PDFReports/PdfTable.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDFReports\\PdfTable.pdf"
     },
     {
       "Identity": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\wwwroot\\simple-404-template-master\\404.html",

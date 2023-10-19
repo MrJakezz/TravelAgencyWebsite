@@ -429,6 +429,10 @@
       "PackagePath": "staticwebassets\\Login_v1\\vendor\\tilt\\tilt.jquery.min.js"
     },
     {
+      "Id": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\wwwroot\\PDFReports\\PdfTable.pdf",
+      "PackagePath": "staticwebassets\\PDFReports\\PdfTable.pdf"
+    },
+    {
       "Id": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\wwwroot\\PDFReports\\pdf1.pdf",
       "PackagePath": "staticwebassets\\PDFReports\\pdf1.pdf"
     },

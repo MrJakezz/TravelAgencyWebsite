@@ -29,6 +29,16 @@ namespace BusinessLayer.Concrete
             _guideDal.Insert(t);
         }
 
+        public void TChangeToActive(int id)
+        {
+            _guideDal.ChangeToActive(id);
+        }
+
+        public void TChangeToPassive(int id)
+        {
+            _guideDal.ChangeToPassive(id);
+        }
+
         public void TDelete(Guide t)
         {
             _guideDal.Delete(t);

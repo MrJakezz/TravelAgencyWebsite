@@ -1,4 +1,5 @@
-﻿using ClosedXML.Excel;
+﻿using BusinessLayer.Abstract;
+using ClosedXML.Excel;
 using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
@@ -8,8 +9,16 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     //[Route("Admin/[controller]/[action]")]
+
     public class ExcelController : Controller
     {
+        private readonly IExcelService _excelService;
+
+        public ExcelController(IExcelService excelService)
+        {
+            _excelService = excelService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -35,27 +44,7 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
 
         public IActionResult StaticExcelReport()
         {
-            ExcelPackage excel = new ExcelPackage();
-            var worksheet = excel.Workbook.Worksheets.Add("Sayfa1");
-
-            worksheet.Cells[1, 1].Value = "Rota";
-            worksheet.Cells[1, 2].Value = "Rehber";
-            worksheet.Cells[1, 3].Value = "Kontenjan";
-
-            worksheet.Cells[2, 1].Value = "Gürcistan - Batum Turu";
-            worksheet.Cells[2, 2].Value = "Ekin Aygül";
-            worksheet.Cells[2, 3].Value = "50";
-
-            worksheet.Cells[3, 1].Value = "Sırbistan - Makedonya Turu";
-            worksheet.Cells[3, 2].Value = "Zeynep Öztürk";
-            worksheet.Cells[3, 3].Value = "30";
-
-            var bytes = excel.GetAsByteArray();
-
-            //Make all the file names unique.
-            Guid guid = Guid.NewGuid();
-
-            return File(bytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"dosya-{guid}.xlsx");
+            return File(_excelService.ExcelList(DestinationList()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "YeniExcel.xlsx");
         }
 
         public IActionResult DestinationExcelReport()

@@ -12,10 +12,29 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfGuideDal : GenericRepository<Guide>, IGuideDal
     {
+        Context context = new Context();
+        public void ChangeToActive(int id)
+        {
+            var values = context.Guides.Find(id);
+
+            values.GuideStatus = true;
+
+            context.Update(values);
+            context.SaveChanges();
+        }
+
+        public void ChangeToPassive(int id)
+        {
+            var values = context.Guides.Find(id);
+
+            values.GuideStatus = false;
+
+            context.Update(values);
+            context.SaveChanges();
+        }
+
         public int GetGuideCount()
         {
-            using var context = new Context();
-
             int guideCount = context.Guides.Count();
 
             return guideCount;

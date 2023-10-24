@@ -1,0 +1,34 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int timer = 0;
+}
+
+<h1>Mesajlar</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Mesajı Aç</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        timer++;
+
+        <tr>
+            <th>@timer</th>
+            <td>@item.ContactUsName</td>
+            <td>@item.ContactUsSubject</td>
+            <td>@item.ContactUsMessageDate.ToString("dd-MMM-yyyy")</td>
+            <td><a href="#" class="btn btn-outline-danger" style="display: block; width: 100%; text-align: center;">Sil</a></td>
+            <td><a href="#" class="btn btn-outline-dark" style="display: block; width: 100%; text-align: center;">Mesajı Aç</a></td>
+        </tr>
+    }
+</table>

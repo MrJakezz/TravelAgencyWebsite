@@ -78,6 +78,28 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Abouts2");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Announcement", b =>
+                {
+                    b.Property<int>("AnnouncementID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnnouncementID"));
+
+                    b.Property<string>("AnnouncementContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("AnnouncementDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AnnouncementTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnnouncementID");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -247,6 +269,37 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("ContactID");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.ContactUs", b =>
+                {
+                    b.Property<int>("ContactUsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactUsID"));
+
+                    b.Property<string>("ContactUsBody")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactUsMail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ContactUsMessageDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ContactUsName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ContactUsStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ContactUsSubject")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactUsID");
+
+                    b.ToTable("ContactUss");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>

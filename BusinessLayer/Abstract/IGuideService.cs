@@ -10,5 +10,7 @@ namespace BusinessLayer.Abstract
     public interface IGuideService : IGenericService<Guide>
     {
         int GetGuideCount();
+        void TChangeToActive(int id);
+        void TChangeToPassive(int id);
     }
 }

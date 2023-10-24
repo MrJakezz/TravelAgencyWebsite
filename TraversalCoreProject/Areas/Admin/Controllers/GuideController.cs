@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 namespace TraversalCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/[controller]/[action]")]
+    [Route("Admin/[controller]/[action]/{id?}")] //Route Configuration
     public class GuideController : Controller
     {
         private readonly IGuideService _guideService;
@@ -69,17 +69,28 @@ namespace TraversalCoreProject.Areas.Admin.Controllers
         {
             _guideService.TUpdate(guide);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
+        }
+        public IActionResult DeleteGuide(int id)
+        {
+            var values = _guideService.TGetById(id);
+            _guideService.TDelete(values);
+
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
 
-        public IActionResult ChangeToActive(int id)
+        public IActionResult ChangeToActive(int id) 
         {
-            return RedirectToAction("Index");
+            _guideService.TChangeToActive(id);
+
+            return RedirectToAction("Index", "Guide", new {area="Admin"});
         }
 
         public IActionResult ChangeToPassive(int id)
         {
-            return RedirectToAction("Index");
+            _guideService.TChangeToPassive(id);
+
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
     }
 }

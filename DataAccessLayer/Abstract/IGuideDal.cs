@@ -10,5 +10,7 @@ namespace DataAccessLayer.Abstract
     public interface IGuideDal : IGenericDal<Guide>
     {
         int GetGuideCount();
+        void ChangeToActive(int id);
+        void ChangeToPassive(int id);
     }
 }

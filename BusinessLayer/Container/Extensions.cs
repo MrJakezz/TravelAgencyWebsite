@@ -66,6 +66,16 @@ namespace BusinessLayer.Container
             //AppUser Configuration
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped<IAppUserDal, EfAppUserDal>();
+
+            //Excel Configuration
+            services.AddScoped<IExcelService, ExcelManager>();
+
+            //PDF Configuration
+            services.AddScoped<IPdfService, PdfManager>();
+
+            //ContactUs Configuration
+            services.AddScoped<IContactUsService, ContactUsManager>();
+            services.AddScoped<IContactUsDal, EfContactUsDal>();
         }
     }
 }

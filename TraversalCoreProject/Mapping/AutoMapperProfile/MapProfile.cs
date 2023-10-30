@@ -2,7 +2,6 @@
 using DTOLayer.DTOs.AnnouncementDTOs;
 using DTOLayer.DTOs.AppUserDTOs;
 using EntityLayer.Concrete;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace TraversalCoreProject.Mapping.AutoMapperProfile
 {
@@ -15,6 +14,15 @@ namespace TraversalCoreProject.Mapping.AutoMapperProfile
 
             CreateMap<AppUserRegisterDTO, AppUser>();
             CreateMap<AppUser, AppUserRegisterDTO>();
+
+            CreateMap<AppUserLoginDTO, AppUser>();
+            CreateMap<AppUser, AppUserLoginDTO>();
+
+            CreateMap<AnnouncementListDTO, Announcement>();
+            CreateMap<Announcement, AnnouncementListDTO>();
+
+            CreateMap<AnnouncementUpdateDTO, Announcement>();
+            CreateMap<Announcement, AnnouncementUpdateDTO>();
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿@model List<GetAllGuideQueriesResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>MediatR</h1>
+<hr>
+<a href="/Admin/GuideMediatR/AddGuide/" class="btn btn-success">Rehber Ekle</a>
+<hr>
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.GuideID</td>
+            <td>@item.GuideName</td>
+            <td>@item.GuideDescription</td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/GuideMediatR/GetGuides/@item.GuideID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>

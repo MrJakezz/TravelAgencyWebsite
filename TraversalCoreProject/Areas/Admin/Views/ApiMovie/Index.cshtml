@@ -1,0 +1,30 @@
+﻿@model List<ApiMovieViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<br>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Film Adı</th>
+        <th>IMDb Puanı</th>
+        <th>Yapım Yılı</th>
+        <th>Fragman</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Rank</td>
+            <td>@item.Title</td>
+            <td>@item.Rating</td>
+            <td>@item.Year</td>
+            <td><a href="#" class="btn btn-outline-primary">Fragmanı İzle</a></td>
+        </tr>
+    }
+</table>

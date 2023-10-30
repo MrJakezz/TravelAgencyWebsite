@@ -1,0 +1,24 @@
+﻿@model CreateDestinationCommand
+@{
+    ViewData["Title"] = "AddDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>AddDestination</h1>
+<hr>
+<form method="post">
+    <label>Şehir Adı</label>
+    <input type="text" asp-for="DestinationCity" class="form-control" />
+    <br>
+    <label>Süre</label>
+    <input type="text" asp-for="DestinationDayNight" class="form-control" placeholder="Gün - Gece"/>
+    <br>
+    <label>Fiyat</label>
+    <input type="text" asp-for="DestinationPrice" class="form-control" />
+    <br>
+    <label>Kapasite</label>
+    <input type="text" asp-for="DestinationCapacity" class="form-control" />
+    <br>
+    <br>
+    <button class="btn btn-success">Ekle</button>
+</form>

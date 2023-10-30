@@ -314,3 +314,8 @@ C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\
 C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\System.Formats.Asn1.dll
 C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\DTOLayer.dll
 C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\DTOLayer.pdb
+C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\MediatR.dll
+C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Erhan\source\repos\TraversalCoreProject\TraversalCoreProject\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BookingHotelSearchViewModel.Result>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int timer = 0;
+}
+
+<h1>Otel Rezervasyon Sayfası</h1>
+<h3>Aranan Şehir: Paris/Fransa</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Otel Adı</th>
+        <th>Otel Puanı</th>
+        <th>Değerlendirme</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        timer++;
+
+        <tr>
+            <td>@timer</td>
+            <td>@item.name</td>
+            <td>@item.reviewScore</td>
+            <td>@item.reviewScoreWord</td>
+            <td><a href="#" class="btn btn-outline-info" style="display: block; width: 100%; text-align: center;">Detaylar</a></td>
+        </tr>
+    }
+</table>

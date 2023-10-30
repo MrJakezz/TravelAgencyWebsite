@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DTOLayer.DTOs.AnnouncementDTOs
+{
+    public class AnnouncementListDTO
+    {
+        //DTO'da yapılacak olan işlemlerdeki prop isimleri, veritabanındaki sütun isimleri ile AYNI olmak zorundadır.
+        public int AnnouncementID { get; set; }
+        public string AnnouncementTitle { get; set; }
+        public string AnnouncementContent { get; set; }
+    }
+}

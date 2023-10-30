@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGNvpUb8iYI4g4b+ZLlMFKhFfIgI4baXJnZdzECxPlHoTToLtll04jlrxmY8sxZgzbvX9gFRH1a67F3Yk1nQmw==",
+  "dgSpecHash": "aj3bSuxiP12CmXp2Qhcq6Omdb/qmCrju0h+oQHcjK+kCjezuUL3E40OwJvfAS8hQK7tqgi5Fcnvrx3DP4nrYeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Erhan\\source\\repos\\TraversalCoreProject\\TraversalCoreProject\\TraversalCoreProject.csproj",
   "expectedPackageFiles": [
@@ -71,6 +71,9 @@
     "C:\\Users\\Erhan\\.nuget\\packages\\irony.netcore\\1.0.11\\irony.netcore.1.0.11.nupkg.sha512",
     "C:\\Users\\Erhan\\.nuget\\packages\\itextsharp.lgplv2.core\\3.4.11\\itextsharp.lgplv2.core.3.4.11.nupkg.sha512",
     "C:\\Users\\Erhan\\.nuget\\packages\\mailkit\\4.2.0\\mailkit.4.2.0.nupkg.sha512",
+    "C:\\Users\\Erhan\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Erhan\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Erhan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\Erhan\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Erhan\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Erhan\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
